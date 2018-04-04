@@ -9,6 +9,10 @@ export class OrderService{
 
  constructor(private cartService: ShoppingCartService){}
 
+itemsValue(): number {
+  return this.cartService.total()
+}
+
 cartItem(): CartItem[]{
   return this.cartService.items
 }
